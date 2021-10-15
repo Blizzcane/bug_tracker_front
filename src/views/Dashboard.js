@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/layout/navigation/Navbar";
 import FilterBar from "../components/layout/navigation/FilterBar";
 import ProjectTable from "../components/layout/navigation/ProjectTable";
 import "./Dashboard.css";
+import { loadProjects } from "../utils/api";
 
 function Dashboard() {
   const test = [
@@ -21,6 +22,11 @@ function Dashboard() {
   ];
 
   const [projects, setProjects] = useState(test);
+
+  useEffect(() => {
+    const abortController = new AbortController();
+    loadProjects(abortController.signal).then(setProjects);
+  }, []);
 
   return (
     <div>
