@@ -28,6 +28,8 @@ function Dashboard() {
     loadProjects(abortController.signal).then(setProjects);
   }, []);
 
+  console.log(projects);
+
   return (
     <div>
       <Navbar />
