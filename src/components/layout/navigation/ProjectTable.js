@@ -16,6 +16,8 @@ function ProjectTable({ projects }) {
       <tr>
         <td>{project.name}</td>
         <td>{project.bugs}</td>
+        <td>{project.members}</td>
+        <td>{project.admin}</td> 
       </tr>
     );
   });

@@ -9,14 +9,14 @@ function Dashboard() {
     {
       name: "Kate",
       bugs: 2,
-      Members: "dfas",
-      Admin: "noone",
+      members: "dfas",
+      admin: "noone",
     },
     {
       name: "John",
       bugs: 3,
-      Members: "dfas",
-      Admin: "noone",
+      members: "afds",
+      admin: "someone",
     },
   ];
 
