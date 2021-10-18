@@ -1,23 +1,15 @@
 import React from "react";
 
 function ProjectTable({ projects }) {
-  const tableData = (
-    <tbody>
-      <tr>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-    </tbody>
-  );
+ 
 
   const tableRow = projects.map((project) => {
     return (
       <tr>
-        <td>{project.name}</td>
+        <td>{project.project_name}</td>
         <td>{project.bugs}</td>
         <td>{project.members}</td>
-        <td>{project.admin}</td> 
+        <td>{project.createdById}</td> 
       </tr>
     );
   });
