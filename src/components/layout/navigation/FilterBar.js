@@ -62,9 +62,7 @@ function FilterBar() {
         onKeyUp={filterProjects}
         placeholder="Search for projects.."
       />
-      <button id="addProject" onClick={sortList} type="button">
-        Add Project
-      </button>
+      
       <ul id="myUL">
         <li>
           <a href="#">Adele</a>
