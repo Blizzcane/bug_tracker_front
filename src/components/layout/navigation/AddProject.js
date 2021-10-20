@@ -8,6 +8,7 @@ function AddProject({ toggleModal }) {
       <div className="addProject">
         <h2>Add a new project</h2>
         <input type="text" placeholder="Project Name" />
+        {/* add members selection */}
         <select name="select-members" id="select-members">
           <option value="volvo">Volvo</option>
           <option value="saab">Saab</option>
