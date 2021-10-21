@@ -6,7 +6,7 @@ function AddProject({ toggleModal }) {
   return ReactDom.createPortal(
     <div className="overlay">
       <div className="addProject">
-        <h2>Add a new project</h2>
+        <h3>Add a new project</h3>
         <input type="text" placeholder="Project Name" />
         {/* add members selection */}
         <select name="select-members" id="select-members">

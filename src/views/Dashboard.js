@@ -18,17 +18,19 @@ function Dashboard() {
       .catch(setProjectErrors);
   }, []);
 
-  const toggleModal  = () => {
+  const toggleModal = () => {
     setShowModal(!showModal);
   };
 
   return (
     <div>
-      <Navbar /> 
+      <Navbar />
       {showModal ? <AddProject toggleModal={toggleModal} /> : null}
+      <div>
+        <h2>All Projects </h2>
+        <h5>List of all the created or joined projects</h5>
+      </div>
 
-      <h2>All Projects </h2>
-      <h4>List of all the created or joined projects</h4>
       <FilterBar projects={projects} setProjects={setProjects} />
       <button id="addProject" onClick={toggleModal} type="button">
         Add Project
