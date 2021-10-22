@@ -35,6 +35,8 @@ function Dashboard() {
       <button id="addProject" onClick={toggleModal} type="button">
         Add Project
       </button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+
       <ProjectTable projects={projects} />
     </div>
   );
