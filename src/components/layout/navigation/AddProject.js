@@ -1,12 +1,18 @@
-import React from "react";
-import ReactDom from "react-dom";
+import React from "react"; 
 import "./AddProject.css";
 
-function AddProject( {closeModal}) {
+function AddProject({ closeModal }) {
   return (
-    <div className="modalBackground">
-      <div className="modelContainer"><button type="button" onClick={closeModal} className="btn btn-secondary" >Close</button></div>
-      
+    <div className="overlay ">
+      <div className="addProject">
+        <button
+          type="button"
+          onClick={() => closeModal(false)}
+          className="btn btn-secondary"
+        >
+          Close
+        </button>
+      </div>
     </div>
   );
 }

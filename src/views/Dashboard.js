@@ -8,7 +8,8 @@ import AddProject from "../components/layout/navigation/AddProject";
 
 function Dashboard() {
   const [projects, setProjects] = useState([]);
-  const [projectErrors, setProjectErrors] = useState([]); 
+  const [projectErrors, setProjectErrors] = useState([]);
+  const [showModal, setShowModal] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
@@ -21,7 +22,7 @@ function Dashboard() {
   return (
     <div>
       <Navbar />
-      {openModal && <AddProject closeModal={() => setProjectErrors(false)}/>}
+      {openModal && <AddProject closeModal={setOpenModal }/>}
       <div>
         <h2>All Projects </h2>
         <h5>List of all the created or joined projects</h5>
