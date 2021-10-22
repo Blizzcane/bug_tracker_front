@@ -21,7 +21,7 @@ function Dashboard() {
   return (
     <div>
       <Navbar />
-      {openModal && <AddProject />}
+      {openModal && <AddProject closeModal={() => setProjectErrors(false)}/>}
       <div>
         <h2>All Projects </h2>
         <h5>List of all the created or joined projects</h5>
