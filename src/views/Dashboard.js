@@ -4,12 +4,11 @@ import FilterBar from "../components/layout/navigation/FilterBar";
 import ProjectTable from "../components/layout/navigation/ProjectTable";
 import "./Dashboard.css";
 import { loadProjects } from "../utils/api";
-import AddProject from "../components/layout/navigation/AddProject";
+import AddProject from "../components/layout/navigation/AddProject";  
 
 function Dashboard() {
   const [projects, setProjects] = useState([]);
-  const [projectErrors, setProjectErrors] = useState([]);
-  const [showModal, setShowModal] = useState(false);
+  const [projectErrors, setProjectErrors] = useState([]); 
   const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
@@ -22,7 +21,7 @@ function Dashboard() {
   return (
     <div>
       <Navbar />
-      {openModal && <AddProject closeModal={setOpenModal }/>}
+      {openModal && <AddProject closeModal={setOpenModal} />} 
       <div>
         <h2>All Projects </h2>
         <h5>List of all the created or joined projects</h5>
