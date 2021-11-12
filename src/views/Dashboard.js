@@ -27,21 +27,12 @@ function Dashboard() {
       <div>
         <h2>All Projects </h2>
         <h5>List of all the created or joined projects</h5>
-      </div>
-      <Button>Open Modal</Button>
+      </div> 
       <FilterBar projects={projects} setProjects={setProjects} />
       <button id="addProject" onClick={() => setOpenModal(true)} type="button">
         Add Project
       </button>
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-        data-bs-whatever="@mdo"
-      >
-        Open modal for @mdo
-      </button>
+       
 
       <ProjectTable projects={projects} />
     </div>
