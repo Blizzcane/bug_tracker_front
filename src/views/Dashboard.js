@@ -4,7 +4,9 @@ import FilterBar from "../components/layout/navigation/FilterBar";
 import ProjectTable from "../components/layout/navigation/ProjectTable";
 import "./Dashboard.css";
 import { loadProjects } from "../utils/api";
-import AddProject from "../components/layout/navigation/AddProject";  
+import AddProject from "../components/layout/navigation/AddProject";
+import { Button } from 'react-bootstrap';
+
 
 function Dashboard() {
   const [projects, setProjects] = useState([]);
@@ -26,7 +28,7 @@ function Dashboard() {
         <h2>All Projects </h2>
         <h5>List of all the created or joined projects</h5>
       </div>
-
+      <Button>Open Modal</Button>
       <FilterBar projects={projects} setProjects={setProjects} />
       <button id="addProject" onClick={() => setOpenModal(true)} type="button">
         Add Project
