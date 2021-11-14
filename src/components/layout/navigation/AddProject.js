@@ -1,9 +1,25 @@
-import React from "react"; 
+import React from "react";
+import Select from "react-select";
 import "./AddProject.css";
 
 function AddProject({ closeModal }) {
+  const members = [
+    { value: "chocolate", label: "Chocolate" },
+    { value: "strawberry", label: "Strawberry" },
+    { value: "vanilla", label: "Vanilla" },
+  ];
+
   return (
-    <div>dsfaf
+    <div className="projectModal">
+      <input type="text" placeholder="Project name" />
+      <Select
+        isMulti
+        className="basic-multi-select"
+        classNamePrefix="select"
+        options={members}
+      />
+
+      <button>CREATE NEW PROJECT</button>
     </div>
   );
 }
