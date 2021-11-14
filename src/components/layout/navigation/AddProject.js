@@ -2,7 +2,7 @@ import React from "react";
 import Select from "react-select";
 import "./AddProject.css";
 
-function AddProject({ closeModal }) {
+function AddProject({ setOpenModal }) {
   const members = [
     { value: "chocolate", label: "Chocolate" },
     { value: "strawberry", label: "Strawberry" },
@@ -10,7 +10,9 @@ function AddProject({ closeModal }) {
   ];
 
   return (
-    <div className="projectModal">
+    <div className="addProject">
+      <h3>Add a new project</h3>
+      <button onClick={() => setOpenModal(false)}>x</button>
       <input type="text" placeholder="Project name" />
       <Select
         isMulti

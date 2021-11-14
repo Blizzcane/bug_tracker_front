@@ -23,7 +23,7 @@ function Dashboard() {
   return (
     <div>
       <Navbar />
-      {openModal && <AddProject closeModal={setOpenModal} />} 
+      {openModal && <AddProject setOpenModal={setOpenModal} />} 
       <div>
         <h2>All Projects </h2>
         <h5>List of all the created or joined projects</h5>
