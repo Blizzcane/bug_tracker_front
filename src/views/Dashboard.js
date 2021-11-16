@@ -12,6 +12,7 @@ function Dashboard() {
   const [projects, setProjects] = useState([]);
   const [projectErrors, setProjectErrors] = useState([]); 
   const [openModal, setOpenModal] = useState(false);
+  const [members, setMembers] = useState([]);
 
   useEffect(() => {
     const abortController = new AbortController();
