@@ -10,18 +10,20 @@ function AddProject({ setOpenModal }) {
   ];
 
   return (
-    <div className="addProject">
-      <h3>Add a new project</h3>
-      <button onClick={() => setOpenModal(false)}>x</button>
-      <input type="text" placeholder="Project name" />
-      <Select
-        isMulti
-        className="basic-multi-select"
-        classNamePrefix="select"
-        options={members}
-      />
+    <div className="overlay">
+      <div className="addProject">
+        <h3>Add a new project</h3>
+        <button onClick={() => setOpenModal(false)}>x</button>
+        <input type="text" placeholder="Project name" />
+        <Select
+          isMulti
+          className="basic-multi-select"
+          classNamePrefix="select"
+          options={members}
+        />
 
-      <button>CREATE NEW PROJECT</button>
+        <button>CREATE NEW PROJECT</button>
+      </div>
     </div>
   );
 }
