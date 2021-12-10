@@ -8,7 +8,7 @@
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  min-width: 30%;
+  min-width: 30%; 
   justify-content: center;
 }
 .overlay {
@@ -21,8 +21,6 @@
   z-index: 1000;
 }
 
-#closeBtn {
-  justify-content: flex-end;
-  margin: 20px 4px;
+#closeBtn { 
   width: 30px;
 }
