@@ -7,14 +7,17 @@ function AddProject({ setOpenModal }) {
     { value: "chocolate", label: "Chocolate" },
     { value: "strawberry", label: "Strawberry" },
     { value: "vanilla", label: "Vanilla" },
-    { value: "lemon", label: "Lemon" }, 
+    { value: "lemon", label: "Lemon" },
   ];
 
   return (
     <div className="overlay">
       <div className="addProject">
+        <button onClick={() => setOpenModal(false)} id="closeBtn">
+          x
+        </button>
+        
         <h3>Add a new project</h3>
-        <button onClick={() => setOpenModal(false)}>x</button>
         <input type="text" placeholder="Project name" />
         <Select
           isMulti

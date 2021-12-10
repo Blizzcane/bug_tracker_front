@@ -10,7 +10,7 @@
   flex-direction: column;
   min-width: 30%;
   justify-content: center;
-} 
+}
 .overlay {
   position: fixed;
   top: 0;
@@ -20,5 +20,9 @@
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
 }
- 
-  
+
+#closeBtn {
+  justify-content: flex-end;
+  margin: 20px 4px;
+  width: 30px;
+}
