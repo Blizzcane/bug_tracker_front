@@ -7,8 +7,7 @@ function AddProject({ setOpenModal }) {
     { value: "chocolate", label: "Chocolate" },
     { value: "strawberry", label: "Strawberry" },
     { value: "vanilla", label: "Vanilla" },
-    { value: "lemon", label: "Lemon" },
-    { value: "cherry", label: "Cherry" },
+    { value: "lemon", label: "Lemon" }, 
   ];
 
   return (
