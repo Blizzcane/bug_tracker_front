@@ -54,7 +54,7 @@ function AddProject({ setOpenModal }) {
           options={members}
           onChange={handleChange}
         />
-
+        {/* fix this stupid selection */}
         <button onClick={createProject}>CREATE NEW PROJECT</button>
       </div>
     </div>
