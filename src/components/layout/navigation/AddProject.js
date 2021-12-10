@@ -19,14 +19,18 @@ function AddProject({ setOpenModal }) {
     console.log(formData);
   };
 
-  const handleChange = ({ target }) => {
+  const handleChange = (e) => {
+    if (e.target.name === "members") {
+      setFormData({ ...formData, members: e });
+    }
+
     setFormData({
       ...formData,
-      projectName: target.value,
+      [e.target.name]: e.target.value,
     });
     console.log(formData);
   };
-
+ 
   return (
     <div className="overlay">
       <div className="addProject">
@@ -37,16 +41,18 @@ function AddProject({ setOpenModal }) {
         <h3>Add a new project</h3>
         <input
           type="text"
+          name="projectName"
           placeholder="Project name"
           onChange={handleChange}
           value={formData.projectName}
         />
         <Select
-          isMulti
+          isMulti={true}
+          name="members"
           className="basic-multi-select"
           classNamePrefix="select"
           options={members}
-          value={formData.members}
+          onChange={handleChange}
         />
 
         <button onClick={createProject}>CREATE NEW PROJECT</button>
