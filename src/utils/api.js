@@ -30,3 +30,9 @@ export async function loadProjects(signal) {
 
     return await fetchJson(url, { headers, signal, method: "GET" }, []);
 }
+
+export async function createProject(project) {
+  const url = new URL(`${API_BASE_URL}/projects`);
+
+  return await fetchJson(url, { headers, signal, method: "POST" }, []);
+}
