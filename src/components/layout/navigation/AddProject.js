@@ -14,23 +14,26 @@ function AddProject({ setOpenModal }) {
 
   const createProject = (e) => {
     e.preventDefault();
-    setFormData("aaa");
-
+    
     console.log(formData);
+    setFormData({ members: [], projectName: "" });
   };
 
   const handleChange = (e) => {
-    if (e.target.name === "members") {
-      setFormData({ ...formData, members: e });
-    }
-
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
-    console.log(formData);
   };
- 
+
+  const setMembers = (e) => {
+    e.forEach(({ value }) => {
+      if (!formData.members.includes(value)) {
+        formData.members.push(value);
+      }
+    }); 
+  };
+
   return (
     <div className="overlay">
       <div className="addProject">
@@ -52,7 +55,7 @@ function AddProject({ setOpenModal }) {
           className="basic-multi-select"
           classNamePrefix="select"
           options={members}
-          onChange={handleChange}
+          onChange={setMembers}
         />
         {/* fix this stupid selection */}
         <button onClick={createProject}>CREATE NEW PROJECT</button>
