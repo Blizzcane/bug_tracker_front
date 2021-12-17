@@ -17,10 +17,11 @@ function AddProject({ setOpenModal }) {
     e.preventDefault();
     const abortController = new AbortController();
 
-    createNewProject(formData)
+    createNewProject(formData, abortController.signal)
       .then(() => console.log("sent"))
       .catch(() => console.log("error"));
-    setFormData({ members: [], projectName: "" });
+    setFormData({ members: [], projectName: "" }); //figure out how to reset the option selector
+
   };
 
   const handleChange = (e) => {
