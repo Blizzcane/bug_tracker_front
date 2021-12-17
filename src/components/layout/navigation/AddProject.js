@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Select from "react-select";
+import { createNewProject } from "../../../utils/api";
 import "./AddProject.css";
 
 function AddProject({ setOpenModal }) {
@@ -14,8 +15,11 @@ function AddProject({ setOpenModal }) {
 
   const createProject = (e) => {
     e.preventDefault();
-    
-    console.log(formData);
+    const abortController = new AbortController();
+
+    createNewProject(formData)
+      .then(() => console.log("sent"))
+      .catch(() => console.log("error"));
     setFormData({ members: [], projectName: "" });
   };
 
@@ -31,7 +35,7 @@ function AddProject({ setOpenModal }) {
       if (!formData.members.includes(value)) {
         formData.members.push(value);
       }
-    }); 
+    });
   };
 
   return (

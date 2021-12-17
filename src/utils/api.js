@@ -31,7 +31,7 @@ export async function loadProjects(signal) {
     return await fetchJson(url, { headers, signal, method: "GET" }, []);
 }
 
-export async function createProject(project, signal) {
+export async function createNewProject(project, signal) {
   const url = new URL(`${API_BASE_URL}/projects`);
 
   const body = JSON.stringify({ data: project });
