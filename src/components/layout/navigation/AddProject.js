@@ -4,13 +4,14 @@ import { createNewProject } from "../../../utils/api";
 import "./AddProject.css";
 
 function AddProject({ setOpenModal }) {
-  const [formData, setFormData] = useState({ members: [], projectName: "" });
+  const [formData, setFormData] = useState({ members: [], project_name: "" });
 
   const members = [
     { value: "chocolate", label: "Chocolate" },
     { value: "strawberry", label: "Strawberry" },
     { value: "vanilla", label: "Vanilla" },
     { value: "lemon", label: "Lemon" },
+    { value: "apple", label: "Apple" },
   ];
 
   const createProject = (e) => {
@@ -20,8 +21,7 @@ function AddProject({ setOpenModal }) {
     createNewProject(formData, abortController.signal)
       .then(() => console.log("sent"))
       .catch(() => console.log("error"));
-    setFormData({ members: [], projectName: "" }); //figure out how to reset the option selector
-
+    setFormData({ members: [], project_name: "" }); //figure out how to reset the option selector
   };
 
   const handleChange = (e) => {
@@ -49,10 +49,10 @@ function AddProject({ setOpenModal }) {
         <h3>Add a new project</h3>
         <input
           type="text"
-          name="projectName"
+          name="project_name"
           placeholder="Project name"
           onChange={handleChange}
-          value={formData.projectName}
+          value={formData.project_name}
         />
         <Select
           isMulti={true}
